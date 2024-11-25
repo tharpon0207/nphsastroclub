@@ -19,10 +19,10 @@ const NavBar = () => {
             <ScrollLink to='News' spy={true} smooth={true} offset={-150} duration={600} className='navBarButton'>News</ScrollLink>
             <ScrollLink to='Events' spy={true} smooth={true} offset={-70} duration={600} className='navBarButton'>Events</ScrollLink>
             <ScrollLink to='Cabinet' spy={true} smooth={true} offset={-120} duration={600} className='navBarButton'>Cabinet</ScrollLink>
+            <ScrollLink to='Contact' spy={true} smooth={true} offset={-120} duration={600} className='navBarButton'>Contact</ScrollLink>
             </>
             )
         }
-        <a className="navBarButton" href="/#/form">Sign Up</a>
         <a className="navBarButton" href="/#/login">Log In</a>
         <a className="navBarButton" href="/#/blog">Blog</a>
     </div>

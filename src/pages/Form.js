@@ -2,7 +2,8 @@ import '../App.css';
 import NavBar from '../NavBar';
 import DoubleInput from '../formComponents/DoubleInput';
 import Input from '../formComponents/Input';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Form = () => {
     const [formData, setFormData] = useState(
@@ -14,6 +15,12 @@ const Form = () => {
             confirm: ''
         }
     );
+
+    const { pathname } = useLocation;
+    
+    useEffect(() => {
+        window.scrollTo({ top: 0});
+      }, [pathname]);
 
     const handleSubmit = (event) => {
         event.preventDefault();

@@ -12,9 +12,9 @@
 }
 
 .navBarButton{
-  width: 7em;
+  width: clamp(3em, 7em, 10em);
   height: 100%;
-  font-size: 1.5em;
+  font-size: clamp(1em, 150%, 2.5rem);
   border: none;
   color: gold;
   text-decoration: none;
@@ -44,6 +44,14 @@ body{
   overflow-x: hidden;
 }
 
+.version{
+  color: aqua;
+  font-style: italic;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1%;
+}
+
 .imgBanner{
   width: 50%;
   height: 50vh;
@@ -71,11 +79,11 @@ body{
   display: block;
   text-align: center;
   align-items: center;
-  width: 10%;
+  width: 10vh;
   height: 100%;
   background-color: rgba(0, 17, 255, 0.26);
   color: gold;
-  font-size: 1.1rem;
+  font-size: clamp(0.5em, 1.1em, 2.5rem);
 }
 
 .imgNavButton:hover{
@@ -143,7 +151,7 @@ body{
 
 .cabinetContainer{
   width: 90%;
-  height: 45rem;
+  height: 80vh;
   border: .5rem solid navy;
   margin-top: 3rem;
   background-color: rgba(0, 0, 128, 0.322);
@@ -169,8 +177,8 @@ body{
 }
 
 .cabDiv{
-  width: 97%;
-  min-height: 20rem;
+  width: 90%;
+  min-height: 30vh;
   border: 4px solid cadetblue;
   display: flex;
   margin-bottom: 2em;
@@ -180,8 +188,8 @@ body{
 }
 
 .profile{
-  min-height: 100%;
-  width: 20%;
+  max-height: 100%;
+  width: 15em;
   border-right: 4px solid cadetblue;
   position: relative;
   background-position: center;
@@ -253,7 +261,7 @@ body{
 
 .eventsContainer{
   width: 100%;
-  height: 55em;
+  height: 80vh;
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
@@ -269,7 +277,7 @@ body{
 
 .eventContainer{
   width: 90%;
-  min-height: 15rem;
+  min-height: 20vh;
   height: fit-content;
   border: .5em solid cadetblue;
   margin-bottom: 3em;
@@ -365,7 +373,7 @@ body{
 
 .announcementsDiv{
   border: 7px solid rgb(99, 4, 189);
-  height: 35rem;
+  height: 75vh;
   width: 90%;
   margin-top: 3rem;
   margin-left: auto;
@@ -398,8 +406,8 @@ body{
   margin-left: auto;
   margin-right: auto;
   border: 5px solid blueviolet;
-  min-height: 20em;
-  max-width: 75em;
+  min-height: 30vh;
+  width: 80%;
   margin-top: 2em;
   display: flex;
   flex-direction: column;
@@ -486,7 +494,7 @@ fieldset{
 }
 
 .miniInputContainer{
-  min-width: 40%;
+  width: 40%;
   height: 70%;
   text-align: center;
   margin-top: auto;
@@ -511,7 +519,7 @@ fieldset{
   background-color: rgba(1, 1, 138, 0.342);
   color: white;
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 
 .miniInput:focus{
@@ -581,7 +589,7 @@ input[type="password"]
   background-color: rgba(1, 1, 138, 0.342);
   color: white;
   text-align: center;
-  font-size: 1.7em;
+  font-size: 1.5vw;
 }
 
 .submitButton:hover{
@@ -659,4 +667,79 @@ input[type="password"]
 
 .at:active{
   color: cadetblue;
+}
+
+.contactDiv{
+  min-height: 30vh;
+  width: 100%;
+  border-top: 3px solid navy;
+  border-bottom: 3px solid navy;
+  margin-top: 5rem;
+  background-color: rgba(1, 1, 138, 0.144);
+}
+
+.logslink{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3%;
+  font-style: normal;
+  font-size: 1.1rem;
+  color: whitesmoke;
+}
+
+.logslink:hover{
+  color: gold;
+}
+
+.logslink:active{
+  color: cadetblue;
+}
+
+.contactDivTitle{
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 2rem;
+  color: aliceblue;
+  font-weight: 600;
+  width: fit-content;
+  border-bottom: 3px dotted aliceblue;
+}
+
+ol{
+  margin-top: 0%;
+}
+
+.contactDivText{
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1.8rem;
+  color: aliceblue;
+  font-weight: 300;
+  width: fit-content;
+  margin-top: -1%;
+}
+
+.contactDivInfo{
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1.8rem;
+  color: aliceblue;
+  font-weight: 300;
+  width: fit-content;
+  margin-top: -1%;
+  font-style: italic;
+}
+
+.patchNotes{
+  width: 50%;
+  height: fit-content;
+  border: 3px solid gray;
+  background-color: rgba(73, 81, 83, 0.404);
+  margin: 0 auto;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
 }

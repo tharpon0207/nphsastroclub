@@ -2,6 +2,8 @@ import '../App.css';
 import NavBar from '../NavBar';
 import { useState } from 'react';
 import Input from '../formComponents/Input';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 const Login = () => {
     const [formData, setFormData] = useState(
         {
@@ -9,6 +11,12 @@ const Login = () => {
             password: '',
         }
     );
+
+    const { pathname } = useLocation;
+    
+    useEffect(() => {
+        window.scrollTo({ top: 0});
+      }, [pathname]);
 
     const handleSubmit = (event) => {
         event.preventDefault();

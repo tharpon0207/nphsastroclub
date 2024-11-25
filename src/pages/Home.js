@@ -5,12 +5,22 @@ import AboutUs from '../AboutUs';
 import Cabinet from '../Cabinet';
 import Events from '../Events';
 import Announcements from '../Announcements';
+import Contact from '../Contact';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function Home() {
+  const {pathname} = useLocation;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0});
+  }, [pathname]);
+  
   return (
     <div className="App" id='Home'>
         <NavBar />
         <p className='welcome'>Welcome to the North Penn Astronomy Club!</p>
+        <p className='version'>Version: 1.0 - Minimum Viable Product</p>
         <ImgBanner />
         <AboutUs />
         <div id='News'>
@@ -21,6 +31,9 @@ function Home() {
         </div>
         <div id='Events'>
           <Events />
+        </div>
+        <div id='Contact'>
+          <Contact />
         </div>
     </div>
   );
