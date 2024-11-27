@@ -205,11 +205,13 @@ body{
 
 .abtUsBody{
   font-size: 1.5em;
-  margin-left: 1em;
+  margin-left: auto;
+  margin-right: auto;
   color: white;
   width: 95%;
   margin-bottom: 2rem;
 }
+
 
 ::-moz-selection { 
   color: white;
@@ -724,17 +726,28 @@ fieldset{
   .miniInputContainer {
     width: 90%; 
     margin-bottom: 1rem; 
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .inputTitle{
     width: 100%;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .miniInputTitle{
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .miniInput{
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: 95%;
   }
 }
 
@@ -755,12 +768,12 @@ input[type="password"]
 
 .submitButton{
   min-height: 4rem;
-  width: 20%;
+  width: 10rem;
   border: .3rem solid navy;
   background-color: rgba(1, 1, 138, 0.342);
   color: white;
   text-align: center;
-  font-size: clamp(1.5vw, 1em, 3em);
+  font-size: 2em;
 }
 
 .submitButton:hover{
