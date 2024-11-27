@@ -6,7 +6,7 @@ const Log = () => {
         <div className='patchNotes'>
             <p className='contactDivTitle'>Patch Notes</p>
             <RouterLink to={"/#Home"} className='logslink'>Return back to home page here</RouterLink>
-            <p className='contactDivText'>v1.0</p>
+            <p className='contactDivText'>v1.0 - Minimum Viable Product</p>
         
             <p className='contactDivText'><span className='contactDivInfo'>11/22/2024</span></p>
             <p className='contactDivText'>
@@ -30,6 +30,15 @@ const Log = () => {
             <li style={{fontSize: '1.5rem', textAlign:'left'}}>Removed Sign Up Nav Bar, added Contact Us Nav Bar</li>     
             <li style={{fontSize: '1.5rem', textAlign:'left'}}>Changed favicon</li>     
             <li style={{fontSize: '1.5rem', textAlign:'left'}}>Automatically scrolls to top when entering a page</li>     
+            </ol>
+            </p>
+
+            <p className='contactDivText'><span className='contactDivInfo'>11/27/2024</span></p>
+            <p className='contactDivText'>
+            <ol>
+            <li style={{fontSize: '1.5rem', textAlign:'left'}}>Better mobile compatibility for images, events, and cabinet</li>   
+            <li style={{fontSize: '1.5rem', textAlign:'left'}}>Changed Navbar for smaller screens ("Menu" option)</li> 
+            <li style={{fontSize: '1.5rem', textAlign:'left'}}>Released updated version to web</li>     
             </ol>
             </p>
         

@@ -20,7 +20,6 @@ function Home() {
     <div className="App" id='Home'>
         <NavBar />
         <p className='welcome'>Welcome to the North Penn Astronomy Club!</p>
-        <p className='version'>Version: 1.0 - Minimum Viable Product</p>
         <ImgBanner />
         <AboutUs />
         <div id='News'>

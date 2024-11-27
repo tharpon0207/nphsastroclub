@@ -23,7 +23,7 @@ export default function Events(){
 
 const Event = ({Month, Day, Start, End, Title, Desc}) => {
     return(
-       <div style={{display: 'flex'}}>
+       <div className='event'>
             <div className="eventDateTime">
                 <text className="eventMonth">{Month}</text>
                 <br />
