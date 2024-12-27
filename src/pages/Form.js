@@ -4,13 +4,16 @@ import DoubleInput from '../formComponents/DoubleInput';
 import Input from '../formComponents/Input';
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import Dropdown from '../formComponents/Dropdown';
 
 const Form = () => {
     const [formData, setFormData] = useState(
         {
             firstName: '',
             lastName: '',
+            id: '',
             email: '',
+            grade: '',
             password: '',
             confirm: ''
         }
@@ -38,13 +41,15 @@ const Form = () => {
                     <p className='welcome'>Make an Account!</p>
                     <fieldset>
                         <DoubleInput value1={formData.firstName} value2={formData.lastName} onChange1={(e) => setFormData({...formData, firstName: e.target.value})} onChange2={(e) => setFormData({...formData, lastName: e.target.value})}/>
+                        <Input title={"School ID"} sample={"123456"} name={"id"} type={"number"} value={formData.username} onChange={(e) => setFormData({...formData, id: e.target.value})}/>
                         <Input title={"School Email"} sample={"astronomy@stu.npenn.org"} name={"email"} type={"email"} value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})}/>
+                        <Dropdown label={'Grade'} size={'120%'} value={formData.grade} onChange={(e) => setFormData({ ...formData, grade: e.target.value })} />
                         <Input title={"Password"} sample={"abcd1234"} name={"password"} type={"password"} value={formData.password} onChange={(e) => setFormData({...formData, password: e.target.value})}/>
                         <Input title={"Confirm Password"} sample={"abcd1234"} name={"password"} type={"password"} value={formData.confirm} onChange={(e) => setFormData({...formData, confirm: e.target.value})}/>
                         <div className='submitDiv'>
-                            <input type="submit" value={"submit"} className="submitButton" disabled={[formData.firstName, formData.lastName, formData.email, formData.password, formData.confirm].some(field => field === '') || formData.password !== formData.confirm} />
+                            <input type="submit" value={"submit"} className="submitButton" disabled={[formData.firstName, formData.lastName, formData.email, formData.password, formData.confirm,formData.grade, formData.username].some(field => field === '') || formData.password !== formData.confirm} />
                         </div>
-                        {([formData.firstName, formData.lastName, formData.email, formData.password, formData.confirm].some(field => field === '') || formData.password !== formData.confirm) &&
+                        {([formData.firstName, formData.lastName, formData.email, formData.password, formData.confirm, formData.grade, formData.username].some(field => field === '') || formData.password !== formData.confirm) &&
                             <div><p className='question' style={{color: "lightgray"}}>NOTE: The submit button is disabled because either all fields are not answered or the passwords do not match.</p></div>
                         }
                         
